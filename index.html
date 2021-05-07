@@ -8,28 +8,40 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
-    <title>trillo &mdash; Your all-in-one booking app</title>
+    <title>Trillo &mdash; Your all-in-one booking app</title>
   </head>
   <body>
     <div class="container">
       <header class="header">
         <img src="img/logo.png" alt="Trillo logo" class="logo" />
 
-        <form action="#" class="search">
-          <input
-            type="text"
-            class="search__input"
-            placeholder="Search Hotels"
-          />
-
-          <button class="search__button">
-            <svg class="search__icon">
-              <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
-            </svg>
-          </button>
+        <form action="#" class="search" autocomplete="off">
+              <input
+              type="text"
+              class="search__input"
+              placeholder="Search Hotels"
+            />
+            <div class="search__suggestion-box">
+              <p class="search-suggestions">Polo Towers</p>
+              <p class="search-suggestions">Hotel Heiga</p>
+              <p class="search-suggestions">Pinisuk</p>
+          </div>
+          
+            <button class="search__button">
+              <svg class="search__icon">
+                <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+              </svg>
+            </button>
+          
         </form>
 
         <nav class="user-nav">
@@ -44,6 +56,13 @@
               <use xlink:href="img/sprite.svg#icon-chat"></use>
             </svg>
             <span class="user-nav__notification">7</span>
+              <div class="message">
+                <span class="message-1">You have 7 messages!</span>
+                <div class="message-user">
+                  <img src="img/user-6.jpg" alt="Bweety" class="message-photo">
+                  <span>Lucy and 6 others...</span>
+                </div>
+              </div>
           </div>
 
           <div class="user-nav__user">
@@ -53,6 +72,26 @@
               class="user-nav__user-photo"
             />
             <span class="user-nav__user-name">Jonas </span>
+            <ul class="dropdown">
+              <li>
+                <a href="#">
+                  <i class="fas fa-user dropdown__icon"></i>
+                  <span> Account </span>
+                </a>
+              </li>
+              <li><a href="#">
+                <i class="far fa-calendar-plus dropdown__icon"></i>
+                  <span> Bookings </span>
+              </a></li>
+              <li><a href="#">
+                <i class="fas fa-cog dropdown__icon"></i>
+                  <span> Settings </span>
+              </a></li>
+              <li><a href="#">
+                <i class="fas fa-sign-out-alt dropdown__icon"></i>
+                  <span> Logout </span>
+              </a></li>
+            </ul>
           </div>
         </nav>
       </header>
@@ -103,13 +142,25 @@
         <main class="hotel-view">
           <div class="gallery">
             <figure class="gallery__item">
-              <img src="img/hotel-1.jpg" alt="Hotel 1" class="gallery__photo" />
+              <img src="img/hotel-1.jpg" alt="Hotel 1" class="gallery__photo gallery__photo--1" />
+              <div class="image-caption">
+                <h1>Hotel Heiga VNS</h1>
+                <p>Welcome to Hotel HEIGA VNS.</p>
+              </div>
             </figure>
             <figure class="gallery__item">
-              <img src="img/hotel-2.jpg" alt="Hotel 2" class="gallery__photo" />
+              <img src="img/hotel-2.jpg" alt="Hotel 2" class="gallery__photo gallery__photo--2" />
+              <div class="image-caption">
+                <h1>Hotel Polo Towers</h1>
+                <p>Welcome to Hotel Polo Towers</p>
+              </div>
             </figure>
             <figure class="gallery__item">
-              <img src="img/hotel-3.jpg" alt="Hotel 3" class="gallery__photo" />
+              <img src="img/hotel-3.jpg" alt="Hotel 3" class="gallery__photo gallery__photo--3" />
+              <div class="image-caption">
+                <h1>Hotel Pinisuk</h1>
+                <p>Welcome to Hotel Pinisuk.</p>
+              </div>
             </figure>
           </div>
 
@@ -236,7 +287,7 @@
                 </figcaption>
               </figure>
 
-              <button class="btn-inline ">Show all <span>&rarr;</span></button>
+              <button class="btn-inline">Show all <span>&rarr;</span></button>
             </div>
           </div>
 
@@ -246,10 +297,9 @@
             </h2>
             <button class="btn">
               <span class="btn__visible">Book Now</span>
-              <span class="btn__invisible">Only 4 rooms left</span> 
+              <span class="btn__invisible">Only 4 rooms left</span>
             </button>
           </div>
-
         </main>
       </div>
     </div>
